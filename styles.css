@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Устанавливаем высоту для всего документа */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('background.webp'); /* Убедитесь, что путь к картинке корректен */
+    background-size: cover; /* Заполняем экран фоновой картинкой */
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Минимальная высота экрана */
+    width: 100vw; /* Убираем горизонтальную прокрутку */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Выравниваем элементы сверху */
+    overflow-y: auto; /* Включаем вертикальную прокрутку */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.content {
+    width: 100%;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 1px 1px 2px #fff; /* Белая обводка для текста */
+}
+
+.content p, .content ul li {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+    text-shadow: 1px 1px 2px #fff; /* Белая обводка для текста */
+}
+
+.content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.content ul li {
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #4682B4;
+    font-weight: bold;
+}
+
+.image {
+    max-width: 100%;
+    padding: 20px;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 600px) {
+    .container {
+        background-color: transparent; /* Убираем белый фон на мобильных */
+        box-shadow: none; /* Убираем тень для чистого вида */
+        padding: 10px;
+    }
+
+    .content {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .content h1 {
+        font-size: 1.8rem;
+    }
+
+    .content p, .content ul li {
+        font-size: 1rem;
+    }
+
+    .content ul {
+        list-style-type: none; /* Убираем маркеры в списках на мобильных устройствах */
+        padding-left: 0;
+    }
+
+    .image {
+        max-width: 100%;
+        padding: 0;
+    }
+}
